@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades relativas</title>
+    <link rel="stylesheet" href="css/unidades.css">
+</head>
+<body id="body">
+    <nav class="flex"  >
+        <ul><li><a title="Porcentajes" href="#body">%</a></li></ul>
+        <ul><li><a title="Viewport Height & Viewport Width" href="#vh_vw">vh y vw</a></li></ul>
+        <ul><li><a title="Viewport Minimum / Viewport Maximum" href="#vmin_vmax">vmin y vmax</a></li></ul>
+        <ul><li><a title="Mínimo y Máximo" href="#min_max">min() y max()</a></li></ul>
+        <ul><li><a title="Clamp()" href="#clamp">clamp()</a></li></ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Porcentajes</h1>
+            <article class="articulo1"><p>Este artículo tiene el 50% del ancho del contenedor.</p></article>
+            <article class="articulo2">Este artículo tiene el 75% del ancho del contenedor.</article>
+            <span id="vh_vw"></span>
+        </section>
+
+        <section id="seccion2">
+            <h1>VH y VW, Viewport Height y Viewport Width</h1>
+            <article class="articulo3"><p>De forma similar a los porcentajes, el viewport toma el tamaño directo del área visible.</p></article>
+            <article class="articulo4"><p>Se ajusta en ancho y alto según el tamaño de la pantalla de nuestro usuario.</p></article>
+            <span id="vmin_vmax"></span>
+        </section>
+
+        <section id="seccion3">
+            <h1>vmin y vmax, Viewport Minimum y Viewport Maximum</h1>
+            <article class="articulo5"><p>Este contenedor se re ajusta al tamaño "máximo" del viewport, en un 50%</p></article>
+            <article class="articulo6"><p>Este contenedor se re ajusta al tamaño "mínimo" del viewport, en un 50%</p></article>
+            <span id="min_max"></span>
+        </section>
+
+        <section id="seccion4">
+            <h1>min() y max()</h1>
+            <article class="articulo7"><p>Este contenedor busca siempre el valor máximo entre 50% y 250px.</p></article>
+            <article class="articulo8"><p>Este contenedor siempre busca un valor mínimo entre 100% y 1400px</p></article>
+            <span id="clamp"></span>
+        </section>
+
+        <section id="seccion5">
+            <h1>clamp()</h1>
+            <article>
+                <h2>Este texto se ajusta siempre entre 2em y 3em</h2>
+                <p>Este texto se ajusta entre 1.2em y 1.8em.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, fugiat, deserunt tempore voluptate ullam expedita ratione sunt ex officiis, odio alias ut. Fugit sint molestias placeat libero facere laboriosam excepturi?
+                Aliquid cupiditate saepe quasi. Impedit illo obcaecati sunt ad cupiditate, officia aut! Explicabo, necessitatibus beatae! Eum unde possimus optio veritatis culpa eligendi voluptates quos alias esse. Asperiores praesentium reiciendis ipsa?</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

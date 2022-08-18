@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Librería | Libros Fantásticos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LREMX5VND"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7LREMX5VND');
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="contenedor-header">
+            <a href="index.html"><img src="img/logo.svg" alt="La Librería | Libros Fantásticos"></a>
+            <nav>
+                <ul>
+                    <li><a class="nav" href="catalogo.html">Catálogo</a></li>
+                    <li><a class="nav" href="sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a class="nav" href="contacto.html">Contacto</a></li>
+                    <li><a class="nav" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <form action="" class="busqueda">
+                <label for="buscar" class="sr-only">Ingresar término de búsqueda</label>
+                <input type="text" name="buscar" aria-label="Ingresar término de búsqueda">
+                <button name="buscar">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <main role="main">
+        <section id="bienvenida">
+            <h1 class="bienvenidaTitulo">Bienvenidos a La Librería</h1>
+        </section>
+        <section id="novedades">
+            <h1>Novedades</h1>
+            <div class="contenedor-novedades">
+                <article>
+                    <img src="img/01.jpg" alt="H.P. Lovecraft, Obras Completas">
+                    <h2>H.P. Lovecraft</h2>
+                    <h3>H.P. Lovecraft, Obras Completas</h3>
+                    <a class="novedades" href="libro1.html">Ver más</a>
+                </article>
+                <article>
+                    <img class="tapaLibro" src="img/02.jpg" alt="Las Crónicas Completas de Conan">
+                    <h2 class="autor">Robert E. Howard</h2>
+                    <h3 class="tituloLibro">Las Crónicas Completas de Conan</h3>
+                    <a class="novedades" href="#">Ver más</a>
+                </article>
+                <article>
+                    <img class="tapaLibro" src="img/03.jpg" alt="Los Hijos de Húrin">
+                    <h2 class="autor">J.R.R. Tolkien</h2>
+                    <h3 class="tituloLibro">Los Hijos de Húrin</h3>
+                    <a class="novedades" href="#">Ver más</a>
+                </article>
+                <article>
+                    <img class="tapaLibro" src="img/04.jpg" alt="El Silmarillion">
+                    <h2 class="autor">J.R.R. Tolkien</h2>
+                    <h3 class="tituloLibro">El Silmarillion</h3>
+                    <a class="novedades" href="#">Ver más</a>
+                </article>
+                <article>
+                    <img class="tapaLibro" src="img/05.jpg" alt="Duna">
+                    <h2 class="autor">Frank Herbert</h2>
+                    <h3 class="tituloLibro">Duna</h3>
+                    <a class="novedades" href="#">Ver más</a>
+                </article>
+                <article>
+                    <img class="tapaLibro" src="img/06.jpg" alt="Michael Crichton">
+                    <h2 class="autor">Michael Crichton</h2>
+                    <h3 class="tituloLibro">Esfera</h3>
+                    <a class="novedades" href="#">Ver más</a>
+                </article>
+                <article>
+                    <img class="tapaLibro" src="img/07.jpg" alt="Las Historias y Poemas de Edgar Allan Poe">
+                    <h2 class="autor">Edgar Allan Poe</h2>
+                    <h3 class="tituloLibro">Las Historias y Poemas de Edgar Allan Poe</h3>
+                    <a class="novedades" href="#">Ver más</a>
+                </article>
+                <article>
+                    <img class="tapaLibro" src="img/08.jpg" alt="Obra Completa de William Shakespeare">
+                    <h2 class="autor">William Shakespeare</h2>
+                    <h3 class="tituloLibro">Obra Completa de William Shakespeare</h3>
+                    <a class="novedades" href="#">Ver más</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>Av. Rivadavia 1755 - CABA</li>
+            <li>011-4444-6666</li>
+            <li>contacto@lalibreria.com.ar</li>
+            <li><a class="footer" href="#header">Ir arriba ^</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

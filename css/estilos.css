@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Esta clase es sólo para referencia de colores */
+html {
+    --color-negro: #07020D;
+    --color-base: #F1E9DB;
+    --color-acento: #5DB7DE;
+    --color-marron-100: #A39B8B;
+    --color-marron-200: #716A5C;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Clase que creamos sólo para los lectores de pantalla */
+.sr-only {
+    position: absolute; /* remueve el elemento del flujo normal del html */
+    left: -4000px;
+}
+
+/* ---------------- Estilos generales ---------------- */
+body {
+    color: var(--color-negro);
+    background-color: var(--color-base);
+    margin: 0;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+/* ---------------- Header y Barra de Navegación ---------------- */
+header {
+    background-color:var(--color-negro);
+    text-align: center;
+    padding: 35px 0 20px;
+    border-bottom: 4px solid var(--color-acento);
+}
+
+.contenedor-header {
+    width: 1250px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Links de la barra de navegación */
+a.nav:link {
+    color: var(--color-base);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+a.nav:visited {
+    color: var(--color-base);
+}
+
+a.nav:hover {
+    color: var(--color-acento);
+}
+
+a.nav:active {
+    color: var(--color-acento);
+}
+
+/* Formulario de búsqueda */
+.busqueda > input,
+.busqueda > button {
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 12px 8px;
+}
+
+.busqueda > input {
+    border: 3px solid var(--color-marron-200);
+}
+
+.busqueda > button {
+    border: 3px solid var(--color-marron-200);
+    cursor: pointer;
+}
+
+.busqueda > button:focus,
+.busqueda > button:hover,
+.busqueda > input:focus {
+    border: 3px solid var(--color-acento);
+}
+
+/* ---------------- Secciones ---------------- */
+section {
+    text-align: center;
+    margin: 32px 0 64px;
+}
+
+/* ---------------- Sección de Bienvenida ---------------- */
+#bienvenida {
+    width: 1250px;
+    height: 450px;
+    margin: 25px auto 0;
+
+    background-image: url('../img/bienvenida.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Solución de la alineación con Flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.bienvenidaTitulo {
+    background-color: #07020d9d;
+    color: var(--color-base);
+    padding: 20px;
+}
+
+/* ---------------- Sección de Novedades ---------------- */
+#novedades {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.contenedor-novedades {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px 16px;
+}
+
+article {  
+    width: 247px;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+
+    margin: 0;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+
+    margin: 0;
+}
+/* Links de las novedades */
+a.novedades:link {
+    display: block;
+    text-decoration: none;
+    padding: 12px 0;
+    margin-top: 12px;
+    color: var(--color-negro);
+    border: 3px solid var(--color-acento);
+    border-radius: 16px;
+}
+
+a.novedades:visited {
+    color: var(--color-negro);
+    border: 3px solid var(--color-acento);
+}
+
+a.novedades:hover {
+    color: var(--color-negro);
+    border: 3px solid var(--color-negro);
+    background-color: var(--color-acento);
+}
+
+a.novedades:active {
+    color: var(--color-negro);
+    border: 3px solid var(--color-negro);
+    background-color: var(--color-acento);
+}
+
+/* ---------------- Detalle del Libro ---------------- */
+#detalleProducto {
+    width: 650px;
+    margin: 0 auto;
+}
+
+#detalleProducto > h2 {
+    font-size: 28px;
+}
+
+#detalleProducto > p {
+    text-align: left;
+}
+
+#detalleProducto > aside {
+    font-style: italic;
+    width: 320px;
+    margin: 0 auto;
+}
+
+/* ---------------- Pié de Página ---------------- */
+footer {
+    background-color: var(--color-marron-200);
+    color: var(--color-base);
+    font-weight: 600;
+    text-align: center;
+    padding: 75px;
+    margin-top: 64px;
+}
+/* Lista del Footer */
+
+footer > ul > li {
+    margin: 0 15px;
+}
+
+/* Links Footer */
+a.footer:link {
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+a.footer:visited {
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+a.footer:hover {
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+a.footer:active {
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+/* Catálogo */
+#catalogo table {
+    margin: 0 auto;
+    width: 1250px;
+}
+
+#catalogo img {
+    width: 150px;
+}
+
+#catalogo th, td {
+    padding: 16px;
+}
+
+#catalogo th {
+    background-color: var(--color-acento);
+}
+
+#catalogo td {
+    background-color: var(--color-marron-100);
+}
+
+#catalogo tr:nth-child(odd) td {
+    background-color: var(--color-marron-200);
+}
+
+#catalogo tr:hover td {
+    background-color: var(--color-acento);
+}
+
+/* Sobre Nosotros */
+#sobrenosotros {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-top: 32px;
+}
+
+.direccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.direccion > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.direccion > ul > li {
+    display: inline-block;
+}
+
+#sobrenosotros video {
+    width: 65%;
+    height: auto;
+}
+
+#sobrenosotros p {
+    line-height: 20px;
+}
+
+#sobrenosotros i {
+    font-size: 32px;
+    margin-right: 32px;
+}
+
+#sobrenosotros iframe {
+    display: block;
+    width: 1250px;
+    margin: 32px auto;
+    border: none;
+    height: 600px;
+}

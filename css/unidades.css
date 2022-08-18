@@ -1,0 +1,158 @@
+/* Mi fuente, Montserrat, Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,800;1,400;1,500;1,800&family=Roboto:ital,wght@0,100;1,100&display=swap');
+
+/* Guía de colores */
+:root {
+    --negro: hsl(267, 73%, 3%);
+    --blanco: hsl(0, 0%, 100%);
+    --fondo: hsl(38, 44%, 90%);
+    --overlay: hsl(198, 66%, 62%);
+    --marron1: hsl(40, 12%, 59%);
+    --marron2: hsl(40, 10%, 40%);
+    --transparente: hsla(0, 9%, 53%, 0);
+}
+
+* {
+    text-decoration: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--negro);
+    margin: 0;
+}
+
+section {
+    color: var(--fondo);
+    padding: 2em;
+    margin-top: 3em;
+}
+
+article {
+    padding: 1em;
+    color: var(--negro);
+    font-weight: 500;
+    min-height: 10em;
+    margin-bottom: 2em;
+}
+
+html {
+    font-size: 16px;
+}
+
+.flex {
+    display: flex;
+}
+
+nav {
+    justify-content: space-evenly;
+    background-color: var(--fondo);
+    position: sticky;
+    top: 0;
+    padding: 1.5em 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-top: 2.5em;
+}
+
+a:link, 
+a:visited {
+    display: inline-block;
+    padding: 1em 0;
+    border-bottom: 3px solid var(--transparente);
+    color: var(--negro);
+}
+
+a:hover, 
+a:active {
+    display: inline-block;
+    padding: 1em 0;
+    border-bottom: 3px solid var(--overlay);
+    color: var(--negro);
+    font-weight: 600;
+}
+
+/* em, hace referencia al font-size del contenedor. rem, hace referencia al font-size del root o html */
+
+/* Porcentajes, los porcentajes siempre se toman en relación al tamaño del contenedor */
+
+.articulo1 {
+    background-color: var(--marron1);
+    width: 50%;
+}
+
+.articulo2 {
+    background-color: var(--marron2);
+    width: 75%;
+}
+
+/* vh y vw, el viewport, o área visible, no toma en cuenta el tamaño del contenedor, sinó que toma como referencia el tamaño del área visible por parte del usuario */
+.articulo3 {
+    background-color: var(--marron1);
+    width: 50vw;
+    height: 30vh;
+}
+
+.articulo4 {
+    background-color: var(--marron2);
+    width: 75vw;
+    height: 30vh;
+}
+
+
+/* vmin y vmax también toman el valor del viewport, pero es específico sobre qué valor es el máximo o mínimo */
+.articulo5 {
+    background-color: var(--marron1);
+    width: 50vmax;
+}
+
+.articulo6 {
+    background-color: var(--marron2);
+    width: 50vmin;
+}
+
+/* min() y max(), nos permite establecer valores máximos y mínimos para un elemento. */
+.articulo7 {
+    background-color: var(--marron1);
+    width: max(250px, 50%); /* Siempre tienen que preguntarse ¿cuál es el valor máximo, ese es el que va a aplicarse*/
+}
+
+.articulo8 {
+    background-color: var(--marron2);
+    width: min(1400px, 100%); /* ¿Cuál es el valor mínimo? Ese es el que va a aplicarse*/
+}
+
+/* clamp(), es una función que utiliza 3 valores, 1 valor de referencia y luego 2 valores para definir el mínimo y el máximo */
+
+#seccion5 article {
+    background-color: var(--marron1);
+}
+
+#seccion5 h2 {
+    /* font-size: clamp(1.5em, 5vw, 3em); */
+    /* font-size: clamp(1.5em, 5vw, 3em); 5vw va a intentar tomar como tamaño 5vw. 2em, 3em */
+    /* font-size: clamp(2em, 5vw, 3em); */
+    font-size: clamp(2em, 4vw, 2.5em);
+}
+
+#seccion5 p {
+    font-size: clamp(1.3em, 2vw, 2em);
+    /* font-size: clamp(1.1rem, 2vw, 1.8rem); */
+    /* font-size: clamp(1.2em, 2vw, 1.8em); */
+}
+
+#seccion5 {
+    font-size: 16px; /* 1em = 36px */
+}
+
+/* @media */
